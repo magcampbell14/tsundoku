@@ -1,17 +1,27 @@
 /**
+ * @OnlyCurrentDoc
+ * (This line limits the script to this one Sheet, so Google doesn't treat it as a risky app.)
+ *
  * Saves Tsundoku data to this Google Sheet.
  *
  * Setup, once, on a computer:
  *   1. In the Sheet: Extensions > Apps Script. Delete what's there and paste this whole file. Save.
- *   2. Deploy > New deployment > gear icon > Web app.
+ *   2. Pick "authorize" in the function menu at the top and click Run. Click Review permissions and allow.
+ *   3. Deploy > New deployment > gear icon > Web app.
  *      Execute as: Me.  Who has access: Anyone.  Click Deploy, then Authorize and allow access.
- *   3. Copy the Web app URL and paste it into the app: Settings > Google Sheet backup.
+ *   4. Copy the Web app URL and paste it into the app: Settings > Google Sheet backup.
  *
  * The URL works like a password: anyone who has it can read and change your saved data,
  * so keep it to yourself.
  */
 
 const SYNC_TAB = '_sync';
+
+/** Run this once from the editor to give the script permission to use this Sheet. */
+function authorize() {
+  const ss = SpreadsheetApp.getActive();
+  return 'Ready: ' + ss.getName();
+}
 const PART = 45000; // stay under Sheets' 50,000-character cell limit
 
 function doGet(e) {
