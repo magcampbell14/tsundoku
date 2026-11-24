@@ -1,6 +1,6 @@
-# Night Shelf
+# Tsundoku
 
-Maggie's reading tracker: an owned-books shelf that lights up as books get read, a yearly goal, streaks, and past-year shelves.
+Maggie’s reading tracker (積読, tsundoku: books bought and left piled up unread): an owned-books shelf that lights up as books get read, a yearly goal, streaks, and past-year shelves.
 
 - `index.html` – the whole app
 - `sw.js`, `manifest.json`, `icon-*.png` – home-screen app and offline support

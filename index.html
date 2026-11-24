@@ -7,11 +7,11 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Night Shelf">
+<meta name="apple-mobile-web-app-title" content="Tsundoku">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="icon" href="icon-192.png">
-<title>Night Shelf</title>
+<title>Tsundoku</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -410,7 +410,7 @@ function drawShelf(){
   el.innerHTML=rows.map(r=>`<div class="row">${r.map(b=>spine(b)).join('')}</div><div class="plank"></div>`).join('');
 }
 const shelfRO=new ResizeObserver(()=>drawShelf());
-function top(){return `<div class="top"><h2>Night <i>Shelf</i></h2><button class="ib" data-act="add" aria-label="Add a book">${ICON.plus}<span>Add</span></button><button class="ib" data-act="settings" aria-label="Settings">${ICON.gear}</button></div>`}
+function top(){return `<div class="top"><h2>Tsundoku <i lang="ja" style="font-size:.62em;font-style:normal;opacity:.85">積読</i></h2><button class="ib" data-act="add" aria-label="Add a book">${ICON.plus}<span>Add</span></button><button class="ib" data-act="settings" aria-label="Settings">${ICON.gear}</button></div>`}
 function readingCard(b){
   const pct=b.pg?Math.round((b.cur||0)/b.pg*100):0;
   return `<div class="rcard"><div class="mini" style="--c:${colr(b)}"></div><div>

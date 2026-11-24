@@ -1,6 +1,6 @@
 {
-  "name": "Night Shelf",
-  "short_name": "Night Shelf",
+  "name": "Tsundoku",
+  "short_name": "Tsundoku",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
