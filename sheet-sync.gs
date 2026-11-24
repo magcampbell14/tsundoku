@@ -1,5 +1,5 @@
 /**
- * Saves Tsundoku (and later Swatch Book) data to this Google Sheet.
+ * Saves Tsundoku data to this Google Sheet.
  *
  * Setup, once, on a computer:
  *   1. In the Sheet: Extensions > Apps Script. Delete what's there and paste this whole file. Save.
